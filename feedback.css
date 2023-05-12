@@ -4,7 +4,7 @@
   
   #correct,
   #incorrect {
-    font-size: 250px;
+    font-size: 75%;
     color: white;
     background-color: red;
     display: inline-block;
