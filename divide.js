@@ -41,27 +41,39 @@ function generate_equation(){
 
 option1.addEventListener("click", function(){
     if(option1.innerHTML == answer){
+      correct.innerHTML = "Correct";
+      incorrect.innerHTML = "";
       generate_equation();
     }
     else{
+      correct.innerHTML = "";
+      incorrect.innerHTML = "Incorrect";
       audio.play();
     }
 });
 
 option2.addEventListener("click", function(){
     if(option2.innerHTML == answer){
+      correct.innerHTML = "Correct";
+      incorrect.innerHTML = "";
       generate_equation();
     }
     else{
+      correct.innerHTML = "";
+      incorrect.innerHTML = "Incorrect";
       audio.play();
     }
 });
 
 option3.addEventListener("click", function(){
     if(option3.innerHTML == answer){
+      correct.innerHTML = "Correct";
+      incorrect.innerHTML = "";
      generate_equation();
     }
     else{
+      correct.innerHTML = "";
+      incorrect.innerHTML = "Incorrect";
       audio.play();
     }
 });
