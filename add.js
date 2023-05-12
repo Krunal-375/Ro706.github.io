@@ -30,33 +30,39 @@ function generate_equation(){
 
 option1.addEventListener("click", function(){
     if(option1.innerHTML == answer){
-      option1.insertAdjacentHTML("beforeend", "<p>Correct</p>");
+      correct.innerHTML = "Correct";
+      incorrect.innerHTML = "";
       generate_equation();
     }
     else{
-      option1.insertAdjacentHTML("beforeend", "<p>Incorrect</p>");
+      correct.innerHTML = "";
+      incorrect.innerHTML = "Incorrect";
       audio.play();
     }
 });
 
 option2.addEventListener("click", function(){
     if(option2.innerHTML == answer){
-      option2.insertAdjacentHTML("beforeend", "<p>Correct</p>");
+      correct.innerHTML = "Correct";
+      incorrect.innerHTML = "";
       generate_equation();
     }
     else{
-      option2.insertAdjacentHTML("beforeend", "<p>Incorrect</p>");
+      correct.innerHTML = "";
+      incorrect.innerHTML = "Incorrect";
       audio.play();
     }
 });
 
 option3.addEventListener("click", function(){
     if(option3.innerHTML == answer){
-      option3.insertAdjacentHTML("beforeend", "<p>Correct</p>");
+      correct.innerHTML = "Correct";
+      incorrect.innerHTML = "";
       generate_equation();
     }
     else{
-       option3.insertAdjacentHTML("beforeend", "<p>Incorrect</p>");
+      correct.innerHTML = "";
+      incorrect.innerHTML = "Incorrect";
       audio.play();
     }
 });
