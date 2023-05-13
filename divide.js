@@ -4,7 +4,7 @@ const option1 = document.getElementById("option1"),
       audio = document.getElementById("myAudio"),
       audio2 = document.getElementById("myAudio2");  
 var answer = 0;
-let score = 0;
+var score = 0;
 
 function generate_equation(){ 
   var num1 = Math.floor(Math.random() * 10) + 1,
