@@ -4,7 +4,7 @@ const option1 = document.getElementById("option1"),
       audio = document.getElementById("myAudio"),
       audio2=document.getElementById("myAudio2");  
 var answer = 0;
-
+let score = 0;
 function generate_equation(){ 
   var num1 = Math.floor(Math.random() * 13),
       num2 = Math.floor(Math.random() * 13),
@@ -40,6 +40,7 @@ option1.addEventListener("click", function(){
     if(option1.innerHTML == answer){
       correct.innerHTML = "Correct";
       audio2.play();
+      score += 4;
       incorrect.innerHTML = "";
       generate_equation();
     }
@@ -54,6 +55,7 @@ option2.addEventListener("click", function(){
     if(option2.innerHTML == answer){
       correct.innerHTML = "Correct";
       audio2.play();
+      score += 4;
       incorrect.innerHTML = "";
       generate_equation();
     }
@@ -68,6 +70,7 @@ option3.addEventListener("click", function(){
     if(option3.innerHTML == answer){
       correct.innerHTML = "Correct";
       audio2.play();
+      score += 4;
       incorrect.innerHTML = "";
       generate_equation();
     }
@@ -79,5 +82,16 @@ option3.addEventListener("click", function(){
 });
 
 generate_equation()
-
+function checkAnswer() {
+  
+  const selectedOption = document.querySelector("input[type=radio]:checked");
+  if (selectedOption) {
+    const answer = selectedOption.value;
+    if (answer === currentQuestion.answer) {
+      score++;
+      document.getElementById("Score: ").innerHTML = "Score: " + score;
+    }
+  }
+}
+document.getElementById("Score: ").innerHTML = "Score: " + score;
 
