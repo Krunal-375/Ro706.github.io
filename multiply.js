@@ -1,8 +1,8 @@
 const option1 = document.getElementById("option1"),
       option2 = document.getElementById("option2"),
       option3 = document.getElementById("option3"),
-      audio = document.getElementById("myAudio");
-      audio2 = document.getElementById("myAudio2")  
+      audio = document.getElementById("myAudio"),
+      audio2 = document.getElementById("myAudio2") ; 
 var answer = 0;
 let score = 0;
 
@@ -34,6 +34,7 @@ function generate_equation(){
 option1.addEventListener("click", function(){
     if(option1.innerHTML == answer){
       correct.innerHTML = "Correct";
+      audio2.play();
       incorrect.innerHTML = "";
       score+=4;
       generate_equation();
@@ -49,6 +50,7 @@ option1.addEventListener("click", function(){
 option2.addEventListener("click", function(){
     if(option2.innerHTML == answer){
       correct.innerHTML = "Correct";
+      audio2.play();
       incorrect.innerHTML = "";
       score+=4;
       generate_equation();
@@ -64,6 +66,7 @@ option2.addEventListener("click", function(){
 option3.addEventListener("click", function(){
     if(option3.innerHTML == answer){
       correct.innerHTML = "Correct";
+      audio2.play();
       incorrect.innerHTML = "";
       score+=4;
      generate_equation();
