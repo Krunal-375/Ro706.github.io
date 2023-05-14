@@ -27,6 +27,7 @@
       <div class="nav">
         <nav>
           <ul>
+            <li><div class="timer">Time remaining: <span id="time-remaining">60</span> seconds</div></li>
             <li><a href="add.html">Add</a></li>
             <li><a href="subtract.html">Subtract</a></li>
             <li class="current"><a href="multiply.html">Multiply</a></li>
@@ -60,8 +61,11 @@
       <div id="correct"></div>
       <div id="incorrect"></div>
     </div>
+    <br>
     <center><div class="score" id="Score: ">0</div></center>
   </h2>
+  <br>
+      <center><button id="play-again" class="button" onclick="location.href='index.html'">Play Again</button></center>
   </div>
 
   <script src="multiply.js"></script>
