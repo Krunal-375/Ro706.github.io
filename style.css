@@ -151,7 +151,26 @@ nav a{
 
 }
 
+.button{
+  text-align: center;
+  font-size:50px;
+  padding: 20px;
+  color:white;
+  background-color: #10cdcd;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
 
+.button:hover{
+  background-color:#06dfdf;
+  cursor: pointer;
+  color:white;
+}
+
+.timer {
+  float: left;
+  margin-left: 10px;
+}
 
 
 
