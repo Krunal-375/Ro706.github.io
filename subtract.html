@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Subtract</title>
   <link rel="stylesheet" href="feedback.css">
-
 </head>
-
 <body>
 
   <audio id="myAudio">
@@ -28,6 +25,7 @@
       <div class="nav">
         <nav>
           <ul>
+            <li><div class="timer">Time remaining: <span id="time-remaining">60</span> seconds</div></li>
             <li><a href="add.html">Add</a></li>
             <li class="current" ><a href="subtract.html">Subtract</a></li>
             <li><a href="multiply.html">Multiply</a></li>
@@ -61,8 +59,11 @@
       <div id="correct"></div>
       <div id="incorrect"></div>
     </div>
+    <br>
     <center><div class="score" id="Score: ">0</div></center>
     <h2>
+      <br>
+      <center><button id="play-again" class="button" onclick="location.href='index.html'">Play Again</button></center>
   </div>
 
   <script src="subtract.js"></script>
