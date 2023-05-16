@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="style.css">
   <title>Add</title>
   <link rel="stylesheet" href="feedback.css">
-
-  
 </head>
 <body>
   
@@ -25,6 +23,8 @@
         <img src="logo.jpg" alt="Logo" align="left">
       </div>
       <div class="nav">
+        <div class="timer" align="left">Time remaining: <span id="time-remaining">60</span> seconds</div>
+        <br><br>
         <nav>
           <ul>
             <li class="current"><a href="add.html">Add</a></li>
@@ -32,6 +32,7 @@
             <li><a href="multiply.html">Multiply</a></li>
             <li><a href="divide.html">Divide</a></li>
           </ul>
+          
         </nav>
       </div>
     </div>
@@ -59,10 +60,14 @@
       <h2><div class="feedback">
         <div id="correct"></div>
         <div id="incorrect"></div>
-        </div></h2>
+        </div>
+        <br>
+        <center><div class="score" id="Score: ">0</div></center>
+      </h2>
+      <br>
+      <center><button id="play-again" class="button" onclick="location.href='index.html'">Play Again</button></center>
   </div>
 
   <script src="add.js"></script>
-  
 </body>
 </html>

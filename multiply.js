@@ -2,8 +2,20 @@ const option1 = document.getElementById("option1"),
       option2 = document.getElementById("option2"),
       option3 = document.getElementById("option3"),
       audio = document.getElementById("myAudio"),
-      audio2= document.getElementById("myAudio2");  
+      audio2 = document.getElementById("myAudio2") ; 
 var answer = 0;
+var score = 0;
+var time = 60;
+var timer;
+
+function togglePlayAgainButton() {
+  var button = document.getElementById("play-again");
+  if (time == 0) {
+    button.style.display = "block";
+  } else {
+    button.style.display = "none";
+  }
+}
 
 function generate_equation(){ 
   var num1 = Math.floor(Math.random() * 13),
@@ -29,17 +41,38 @@ function generate_equation(){
   option3.innerHTML = switchAnswers[2]; 
 
 };
+function startTimer() {
+  timer = setInterval(function() {
+    time--;
+    if (time == 0) {
+      clearInterval(timer);
+      document.querySelector('.answer-options').style.pointerEvents = 'none';
+      document.getElementById("play-again").style.display = "block";
+    }
+    
+    document.getElementById("time-remaining").innerHTML = time;
+    if (time == 0) {
+      clearInterval(timer);
+      document.getElementById("play-again").style.display = "block";
+      option1.removeEventListener("click", checkAnswer);
+      option2.removeEventListener("click", checkAnswer);
+      option3.removeEventListener("click", checkAnswer);
+    }
+  }, 1000);
+}
 
 option1.addEventListener("click", function(){
     if(option1.innerHTML == answer){
       correct.innerHTML = "Correct";
       audio2.play();
       incorrect.innerHTML = "";
+      score+=4;
       generate_equation();
     }
     else{
       correct.innerHTML = "";
       incorrect.innerHTML = "Incorrect";
+      score-=1;
       audio.play();
     }
 });
@@ -49,11 +82,13 @@ option2.addEventListener("click", function(){
       correct.innerHTML = "Correct";
       audio2.play();
       incorrect.innerHTML = "";
+      score+=4;
       generate_equation();
     }
     else{
       correct.innerHTML = "";
       incorrect.innerHTML = "Incorrect";
+      score-=1;
       audio.play();
     }
 });
@@ -61,17 +96,43 @@ option2.addEventListener("click", function(){
 option3.addEventListener("click", function(){
     if(option3.innerHTML == answer){
       correct.innerHTML = "Correct";
-      audio.play();
+      audio2.play();
       incorrect.innerHTML = "";
+      score+=4;
      generate_equation();
     }
     else{
       correct.innerHTML = "";
       incorrect.innerHTML = "Incorrect";
+      score-=1;
       audio.play();
     }
+    document.getElementById("Score: ").innerHTML = "Score: " + score;
 });
 
 generate_equation()
 
+function checkAnswer() {
+  
+  const selectedOption = document.querySelector("input[type=radio]:checked");
+  if (selectedOption) {
+    const answer = selectedOption.value;
+    if (answer === currentQuestion.answer) {
+      score++;
+      document.getElementById("Score: ").innerHTML = "Score: " + score;
+    }
+  }
+}
 
+
+window.onload = function() {
+  startTimer();
+  generate_equation();
+  option1.addEventListener("click", checkAnswer);
+  option2.addEventListener("click", checkAnswer);
+  option3.addEventListener("click", checkAnswer);
+};
+window.addEventListener("load", function() {
+  togglePlayAgainButton();
+});
+document.getElementById("Score: ").innerHTML = "Score: " + score;
