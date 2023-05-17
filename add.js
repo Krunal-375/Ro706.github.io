@@ -20,8 +20,8 @@ function togglePlayAgainButton() {
 function generate_equation(){ 
   var num1 = Math.floor(Math.random() * 13),
       num2 = Math.floor(Math.random() * 13),
-      dummyAnswer1 = Math.floor(Math.random() * 10),
-      dummyAnswer2 = Math.floor(Math.random() * 10),
+      dummyAnswer1 = Math.floor(Math.random() * 13),
+      dummyAnswer2 = Math.floor(Math.random() * 13),
       allAnswers = [],
       switchAnswers = [];
 
