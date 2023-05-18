@@ -45,7 +45,11 @@
         <h1  id="num2" style="color: #FED766">1</h1>
         <h1  style="color: #F86624">=</h1>
         <h1  style="color: gray">?</h1>
-        <center><div class="score" id="Score: ">0</div></center>
+        <div class="feedback" align="left">
+            <div class ="fd" id="correct" style="background:white;color:black;"></div>
+            <div class ="fd" id="incorrect" style="background:white;color:black;"></div>
+        </div>
+        <div class="score" id="Score">0</div>
       </div>
       <div class="answer-options">
         <div class="options" style="background-color: #FE4A49;">
@@ -58,11 +62,8 @@
           <h1 id="option3">3</h1>
         </div>
       </div>
-      </h2>
-      <br>
-      <center><button id="play-again" class="button" onclick="location.href='index.html'">Play Again</button></center>
   </div>
-
+  <center><button id="play-again" class="button" onclick="location.href='index.html'">Play Again</button></center>
   <script src="add.js"></script>
 </body>
 </html>
