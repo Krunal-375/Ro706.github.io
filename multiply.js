@@ -2,7 +2,9 @@ const option1 = document.getElementById("option1"),
       option2 = document.getElementById("option2"),
       option3 = document.getElementById("option3"),
       audio = document.getElementById("myAudio"),
-      audio2 = document.getElementById("myAudio2") ; 
+      audio2 = document.getElementById("myAudio2") ;
+      winAudio = document.getElementById("winAudio");
+      looseAudio = document.getElementById("loosAdio"); 
 var answer = 0;
 var score = 0;
 var time = 60;
@@ -48,6 +50,16 @@ function startTimer() {
       clearInterval(timer);
       document.querySelector('.answer-options').style.pointerEvents = 'none';
       document.getElementById("play-again").style.display = "block";
+      if(score > 10){
+        winAudio.play();
+      }
+      else{
+        loosAudio.play();
+      }
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+      });
     }
     
     document.getElementById("time-remaining").innerHTML = time;
