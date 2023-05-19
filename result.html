@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <img src="logo.jpg" alt="Logo" align="left">
+        <nav>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="wrapper" style="width:1880px;">
+    <div class="equation">
+      <h1  style="color:#feb649;width:100px;">GAME ENDED!</h1>
+      <div class="footer" style="width:2000px;">
+        <div class="footer"><h6 style="color:#5b49fe;" id="num1">You Scored :</h6></div>
+      </div>
+    </div>
+    
+  <script>
+    const score = sessionStorage.getItem("score");
+    document.getElementById("num1").innerHTML = "Score: " + score;
+  </script>
+  
+</body>
+</html>
