@@ -59,8 +59,9 @@ function startTimer() {
     if (time == 0) {
       clearInterval(timer);
       document.querySelector('.answer-options').style.pointerEvents = 'none';
-      document.getElementById("play-again").style.display = "block";
+      // document.getElementById("play-again").style.display = "block";
       sessionStorage.setItem("score", score);
+      location.href='result.html';
       if(score > 10){
         winAudio.play();
       }
