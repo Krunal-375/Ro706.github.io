@@ -60,6 +60,7 @@ function startTimer() {
       clearInterval(timer);
       document.querySelector('.answer-options').style.pointerEvents = 'none';
       document.getElementById("play-again").style.display = "block";
+      sessionStorage.setItem("score", score);
       if(score > 10){
         winAudio.play();
       }
