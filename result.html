@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="result.css">
   
 </head>
 <body>
   <header>
     <div class="container">
       <div class="nav">
-        <img src="logo.jpg" alt="Logo" align="left">
+        <img src="logo.jpg" alt="Logo" align="left" class="logo-img" width="100%">
         <nav>
           <ul>
             <li class="current"><a href="index.html">Home</a></li>
@@ -23,13 +23,8 @@
       </div>
     </div>
   </header>
-  <div class="wrapper" style="width:100%;">
-    <div class="equation">
-      <h2  style="color:#feb649;">GAME ENDED!</h2></div>
-      <br>
-      <div class="equation">
-      <div class="footer" align="left"><h6 style="color:#5b49fe;" id="num1">You Scored :</div>
-    </div>
+      <center><span style="color:#feb649;font-size:80px;" class="game"><b>GAME ENDED!</b></span></center><br><br>
+      <center><span  id="num1"><b>You Scored :</b></span></center><br><br>
     <center><button id="play-again" class="button" onclick="location.href='index.html'">Play Again</button></center>
   <script>
     const score = sessionStorage.getItem("score");
