@@ -5,48 +5,46 @@ img{
 }
 
 #start{
-  text-align: center;
-  font-size:30px;
-  padding: 30px;
-  color:white;
-  background-color: #10cdcd;
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  color:#000000;
+  font-size: 30px;
+  padding: 20px;
+  border-radius: 52px;
+  background: linear-gradient(145deg, #b4c7c9, #d6ecef);
+  box-shadow:  25px 25px 50px #505859,
+               -25px -25px 50px #ffffff;
 }
 #start:hover{
-  background-color:#3ffafa;
+  background-color:#c53232;
   cursor: pointer;
-  color:white;
-  font-size: 40px;
+  color:rgb(51, 51, 51);
+  font-size: 35px;
 }
 .nano{
-  text-align: center;
-  font-size:20px;
-  padding: 20px;
-  color:white;
-  background-color: #68cfcf;
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  font-size: large;
+  padding: 10px;
+  border-radius: 52px;
+  background: linear-gradient(145deg, #b4c7c9, #d6ecef);
+  box-shadow:  25px 25px 50px #505859,
+               -25px -25px 50px #ffffff;
 }
 .nano:hover{
   background-color:#1fb5b5;
   cursor: pointer;
-  color:white;
+  color:rgb(51, 51, 51);
   font-size: 30px;
 }
 .nano-1{
-  text-align: center;
-  font-size:20px;
-  padding: 20px;
-  color:white;
-  background-color: #14a4a4;
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  font-size: large;
+  padding: 10px;
+  border-radius: 52px;
+  background: linear-gradient(145deg, #b4c7c9, #d6ecef);
+  box-shadow:  25px 25px 50px #505859,
+               -25px -25px 50px #ffffff;
 }
 .nano-1:hover{
   background-color:#1fb5b5;
   cursor: pointer;
-  color:white;
+  color:rgb(51, 51, 51);
   font-size: 30px;
 }
 *{
